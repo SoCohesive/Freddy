@@ -1,0 +1,6 @@
+framework module Realm_JSON {
+  umbrella header "Realm+JSON-umbrella.h"
+
+  export *
+  module * { export * }
+}

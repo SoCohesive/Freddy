@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15A216g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+            <string>HelveticaNeue</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--Currency Exchange View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CurrencyExchangeViewController" customModule="Freddy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FreddyLaunch001" translatesAutoresizingMaskIntoConstraints="NO" id="pT5-DG-z5h" userLabel="freddyLaunchImageView">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <animations/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0dH-ar-vHC">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aly-hu-FVD" userLabel="containerView">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Dollar Amount" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jxT-vn-mJg" userLabel="usdTextField" customClass="AmountTextField" customModule="Freddy" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="90" width="495" height="50"/>
+                                                <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="fov-In-I2K"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="6yv-We-eBl"/>
+                                                </connections>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8a-nO-MPV" userLabel="usdStaticLabel">
+                                                <rect key="frame" x="545" y="105" width="35" height="21"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eaL-JN-bh6" userLabel="topSeperatorView">
+                                                <rect key="frame" x="545" y="127" width="35" height="1"/>
+                                                <animations/>
+                                                <color key="backgroundColor" red="0.13725490200000001" green="0.6588235294" blue="0.76470588240000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="qtq-Es-nqu"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="40T-8X-bQn" userLabel="toStaticLabel">
+                                                <rect key="frame" x="257" y="170" width="21" height="21"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLD-68-RrY" customClass="CurrencyButton" customModule="Freddy" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="211" width="109" height="40"/>
+                                                <animations/>
+                                                <color key="backgroundColor" red="0.13725490200000001" green="0.6588235294" blue="0.76470588240000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="5af-LC-fuv"/>
+                                                </constraints>
+                                                <state key="normal" title="GBP"/>
+                                                <connections>
+                                                    <action selector="gbpButtonSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dDg-rb-HoI"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLD-Iq-jWD" customClass="CurrencyButton" customModule="Freddy" customModuleProvider="target">
+                                                <rect key="frame" x="149" y="211" width="109" height="40"/>
+                                                <animations/>
+                                                <state key="normal" title="EUR"/>
+                                                <connections>
+                                                    <action selector="eurButtonSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4zM-tj-aRz"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SlW-BE-S6G" customClass="CurrencyButton" customModule="Freddy" customModuleProvider="target">
+                                                <rect key="frame" x="278" y="211" width="108" height="40"/>
+                                                <animations/>
+                                                <state key="normal" title="JPY"/>
+                                                <connections>
+                                                    <action selector="jpyButtonSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pyX-1l-g7e"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I45-9i-zjb" userLabel="Brl Button" customClass="CurrencyButton" customModule="Freddy" customModuleProvider="target">
+                                                <rect key="frame" x="406" y="211" width="109" height="40"/>
+                                                <animations/>
+                                                <state key="normal" title="BRL"/>
+                                                <connections>
+                                                    <action selector="brlButtonSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rps-pe-0Oy"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ati-QN-VQt">
+                                                <rect key="frame" x="239" y="281" width="57" height="24"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2C8-Vs-TqI" userLabel="bottomSeperatorView">
+                                                <rect key="frame" x="239" y="304" width="57" height="1"/>
+                                                <animations/>
+                                                <color key="backgroundColor" red="0.13725490200000001" green="0.6588235294" blue="0.76470588240000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="xKL-kU-P1U"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="Ati-QN-VQt" firstAttribute="centerX" secondItem="40T-8X-bQn" secondAttribute="centerX" id="43f-fI-qfU"/>
+                                            <constraint firstItem="jxT-vn-mJg" firstAttribute="leading" secondItem="Aly-hu-FVD" secondAttribute="leading" constant="20" id="4mp-Tt-OHt"/>
+                                            <constraint firstItem="NLD-68-RrY" firstAttribute="top" secondItem="40T-8X-bQn" secondAttribute="bottom" constant="20" id="6o1-RW-ZnC"/>
+                                            <constraint firstItem="2C8-Vs-TqI" firstAttribute="leading" secondItem="Ati-QN-VQt" secondAttribute="leading" id="84J-UT-d7d"/>
+                                            <constraint firstItem="VLD-Iq-jWD" firstAttribute="height" secondItem="NLD-68-RrY" secondAttribute="height" id="97K-Sk-iiP"/>
+                                            <constraint firstItem="VLD-Iq-jWD" firstAttribute="top" secondItem="NLD-68-RrY" secondAttribute="top" id="9ni-eU-kxu"/>
+                                            <constraint firstItem="SlW-BE-S6G" firstAttribute="leading" secondItem="VLD-Iq-jWD" secondAttribute="trailing" constant="20" id="Bmv-e1-O5I"/>
+                                            <constraint firstItem="Z8a-nO-MPV" firstAttribute="leading" secondItem="jxT-vn-mJg" secondAttribute="trailing" constant="30" id="Htz-f0-kGe"/>
+                                            <constraint firstAttribute="trailing" secondItem="Z8a-nO-MPV" secondAttribute="trailing" constant="20" id="Jof-IX-cRj"/>
+                                            <constraint firstItem="Ati-QN-VQt" firstAttribute="bottom" secondItem="2C8-Vs-TqI" secondAttribute="top" constant="1" id="KlE-nE-Hj1"/>
+                                            <constraint firstItem="Ati-QN-VQt" firstAttribute="top" secondItem="2C8-Vs-TqI" secondAttribute="bottom" constant="1" id="LPL-wX-ay8"/>
+                                            <constraint firstItem="40T-8X-bQn" firstAttribute="top" secondItem="jxT-vn-mJg" secondAttribute="bottom" constant="30" id="LnI-ib-QkW"/>
+                                            <constraint firstItem="VLD-Iq-jWD" firstAttribute="width" secondItem="NLD-68-RrY" secondAttribute="width" id="MF7-6l-H5N"/>
+                                            <constraint firstItem="I45-9i-zjb" firstAttribute="trailing" secondItem="jxT-vn-mJg" secondAttribute="trailing" id="MjK-R3-B2h"/>
+                                            <constraint firstItem="NLD-68-RrY" firstAttribute="width" secondItem="jxT-vn-mJg" secondAttribute="width" multiplier="2:6" id="PQ3-gD-ow1"/>
+                                            <constraint firstItem="2C8-Vs-TqI" firstAttribute="top" secondItem="Ati-QN-VQt" secondAttribute="bottom" constant="1" id="PZy-MR-gHU"/>
+                                            <constraint firstItem="jxT-vn-mJg" firstAttribute="top" secondItem="Aly-hu-FVD" secondAttribute="top" constant="90" id="VgG-IE-Jkd"/>
+                                            <constraint firstItem="I45-9i-zjb" firstAttribute="top" secondItem="NLD-68-RrY" secondAttribute="top" id="WvD-Tu-WOI"/>
+                                            <constraint firstItem="eaL-JN-bh6" firstAttribute="top" secondItem="Z8a-nO-MPV" secondAttribute="bottom" constant="1" id="ayM-Gc-dfA"/>
+                                            <constraint firstItem="I45-9i-zjb" firstAttribute="height" secondItem="NLD-68-RrY" secondAttribute="height" id="bWO-Pg-uVi"/>
+                                            <constraint firstItem="2C8-Vs-TqI" firstAttribute="width" secondItem="Ati-QN-VQt" secondAttribute="width" id="bWf-yN-062"/>
+                                            <constraint firstItem="2C8-Vs-TqI" firstAttribute="width" secondItem="Ati-QN-VQt" secondAttribute="width" id="cW5-r8-dBe"/>
+                                            <constraint firstItem="eaL-JN-bh6" firstAttribute="width" secondItem="Z8a-nO-MPV" secondAttribute="width" id="eGy-MT-98T"/>
+                                            <constraint firstItem="2C8-Vs-TqI" firstAttribute="centerX" secondItem="Ati-QN-VQt" secondAttribute="centerX" id="g9K-5e-tfB"/>
+                                            <constraint firstItem="SlW-BE-S6G" firstAttribute="top" secondItem="NLD-68-RrY" secondAttribute="top" id="i9c-NO-wao"/>
+                                            <constraint firstItem="NLD-68-RrY" firstAttribute="leading" secondItem="jxT-vn-mJg" secondAttribute="leading" id="ltW-jb-y6C"/>
+                                            <constraint firstItem="Ati-QN-VQt" firstAttribute="top" secondItem="2C8-Vs-TqI" secondAttribute="bottom" constant="1" id="rBh-fC-aC0"/>
+                                            <constraint firstItem="I45-9i-zjb" firstAttribute="width" secondItem="NLD-68-RrY" secondAttribute="width" id="ssD-pD-hgE"/>
+                                            <constraint firstItem="eaL-JN-bh6" firstAttribute="leading" secondItem="Z8a-nO-MPV" secondAttribute="leading" id="tpG-NH-ebH"/>
+                                            <constraint firstItem="VLD-Iq-jWD" firstAttribute="leading" secondItem="NLD-68-RrY" secondAttribute="trailing" constant="20" id="ttK-Ai-7OF"/>
+                                            <constraint firstItem="Z8a-nO-MPV" firstAttribute="centerY" secondItem="jxT-vn-mJg" secondAttribute="centerY" id="uHU-TA-jdV"/>
+                                            <constraint firstItem="SlW-BE-S6G" firstAttribute="width" secondItem="NLD-68-RrY" secondAttribute="width" id="w5C-JC-104"/>
+                                            <constraint firstItem="SlW-BE-S6G" firstAttribute="height" secondItem="NLD-68-RrY" secondAttribute="height" id="ww9-bk-Qu1"/>
+                                            <constraint firstItem="2C8-Vs-TqI" firstAttribute="top" secondItem="Ati-QN-VQt" secondAttribute="bottom" constant="1" id="xaH-T8-lvh"/>
+                                            <constraint firstItem="eaL-JN-bh6" firstAttribute="leading" secondItem="Z8a-nO-MPV" secondAttribute="leading" id="xuV-9v-7hZ"/>
+                                            <constraint firstItem="40T-8X-bQn" firstAttribute="centerX" secondItem="jxT-vn-mJg" secondAttribute="centerX" id="y6B-NZ-I7h"/>
+                                            <constraint firstItem="I45-9i-zjb" firstAttribute="leading" secondItem="SlW-BE-S6G" secondAttribute="trailing" constant="20" id="z4v-nH-7kC"/>
+                                            <constraint firstItem="Ati-QN-VQt" firstAttribute="top" secondItem="VLD-Iq-jWD" secondAttribute="bottom" constant="30" id="z78-dC-r4j"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="PQ3-gD-ow1"/>
+                                                <exclude reference="LPL-wX-ay8"/>
+                                                <exclude reference="rBh-fC-aC0"/>
+                                                <exclude reference="PZy-MR-gHU"/>
+                                                <exclude reference="bWf-yN-062"/>
+                                                <exclude reference="g9K-5e-tfB"/>
+                                                <exclude reference="xaH-T8-lvh"/>
+                                                <exclude reference="xuV-9v-7hZ"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
+                                </subviews>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstItem="Aly-hu-FVD" firstAttribute="top" secondItem="0dH-ar-vHC" secondAttribute="top" id="Gb0-YA-2kw"/>
+                                    <constraint firstItem="Aly-hu-FVD" firstAttribute="leading" secondItem="0dH-ar-vHC" secondAttribute="leading" id="NE5-6I-6yn"/>
+                                    <constraint firstItem="Aly-hu-FVD" firstAttribute="centerY" secondItem="0dH-ar-vHC" secondAttribute="centerY" id="cpK-Nm-YAd"/>
+                                    <constraint firstAttribute="trailing" secondItem="Aly-hu-FVD" secondAttribute="trailing" id="cu3-Fc-Ivf"/>
+                                    <constraint firstItem="Aly-hu-FVD" firstAttribute="centerY" secondItem="0dH-ar-vHC" secondAttribute="centerY" id="cwV-vU-Tiv"/>
+                                    <constraint firstAttribute="bottom" secondItem="Aly-hu-FVD" secondAttribute="bottom" id="d2A-Ty-cyo"/>
+                                    <constraint firstItem="Aly-hu-FVD" firstAttribute="centerX" secondItem="0dH-ar-vHC" secondAttribute="centerX" id="evc-KN-B55"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="cwV-vU-Tiv"/>
+                                    </mask>
+                                </variation>
+                            </scrollView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0dH-ar-vHC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="1TX-Gi-TUz"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pT5-DG-z5h" secondAttribute="bottom" id="33E-vd-TKO"/>
+                            <constraint firstItem="pT5-DG-z5h" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="94X-pY-B01"/>
+                            <constraint firstItem="pT5-DG-z5h" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="HZ0-gM-T5w"/>
+                            <constraint firstItem="0dH-ar-vHC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="UuB-00-geE"/>
+                            <constraint firstAttribute="trailing" secondItem="pT5-DG-z5h" secondAttribute="trailing" id="dbt-Yo-bYB"/>
+                            <constraint firstAttribute="trailing" secondItem="0dH-ar-vHC" secondAttribute="trailing" id="wQc-ET-phz"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0dH-ar-vHC" secondAttribute="bottom" id="wgq-pr-HNT"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <connections>
+                        <outlet property="brlButton" destination="I45-9i-zjb" id="3Gg-Si-Tpv"/>
+                        <outlet property="containerView" destination="Aly-hu-FVD" id="PKs-WE-vmZ"/>
+                        <outlet property="eurButton" destination="VLD-Iq-jWD" id="lMw-a4-g9e"/>
+                        <outlet property="freddyLaunchImageView" destination="pT5-DG-z5h" id="6Ro-8B-idl"/>
+                        <outlet property="gbpButton" destination="NLD-68-RrY" id="TPq-1Z-ZVu"/>
+                        <outlet property="jpyButton" destination="SlW-BE-S6G" id="LaM-FE-oxX"/>
+                        <outlet property="resultLabel" destination="Ati-QN-VQt" id="NKI-I2-tFH"/>
+                        <outlet property="scrollView" destination="0dH-ar-vHC" id="BT8-hQ-yCg"/>
+                        <outlet property="usdAmountTextField" destination="jxT-vn-mJg" id="a1S-Up-bZ2"/>
+                        <outlet property="usdStaticLabel" destination="Z8a-nO-MPV" id="Pbt-6s-8AP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="258" y="312"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="FreddyLaunch001" width="700" height="500"/>
+    </resources>
+</document>

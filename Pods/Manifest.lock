@@ -1,0 +1,25 @@
+PODS:
+  - Alamofire (2.0.2)
+  - AlamofireImage (1.1.2):
+    - Alamofire (~> 2.0)
+  - MBProgressHUD (0.9.1)
+  - Realm (0.98.1):
+    - Realm/Headers (= 0.98.1)
+  - Realm+JSON (0.2.14):
+    - Realm (~> 0.95)
+  - Realm/Headers (0.98.1)
+
+DEPENDENCIES:
+  - Alamofire (~> 2.0)
+  - AlamofireImage (~> 1.0)
+  - MBProgressHUD (~> 0.9.1)
+  - Realm+JSON (~> 0.2)
+
+SPEC CHECKSUMS:
+  Alamofire: 8edbab00802a752bb5240cc2abe70e7e881488ad
+  AlamofireImage: dc3d3de5d095fd9545b144ba8f6da5bfc539512a
+  MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
+  Realm: ca4a4122e939e228e10694fc49011386cb2ecb07
+  Realm+JSON: 39bef066156e589b209a14e5f2d68754793f8843
+
+COCOAPODS: 0.39.0
